@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <link rel="stylesheet" href="style.CSS"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentMyCaravan.io</title>
+    <link rel="icon" type="favicon" href="favicon.jpg">
+</head>
+<body>
+  <div class="main">
+    <div class="navbar">
+
+      <div class="icon">          
+          <h2 class="logo">RentmyCaravan.io</h2>
+          </div>
+          
+            <div class="Menu">
+              <ul>
+                <li><a href="homePage.HTML">HOME</a></li>
+                <li><a href="newCaravan.HTML">UPLOAD NEW AD</a></li>
+                <li><a href="">HISTORY</a></li>
+                <li><a href="">ABOUT US</a></li>
+                <li><a href="" class="right">LOGOUT</a></li>               
+          
+              </ul>
+          </div>        
+     
+    </div>
+   </div>
+
+   <div class="mainPage">
+    <br>
+<div id="AdCar">
+    <br>
+    <h3>Advertise your caravan</h3>
+    <p>To advertise your caravan, please fill in this form as complete as possible.</p>
+    <p>the more details you fill in, the more chance you have to rent out your caravan.</p>
+    <br>
+    <p>Fields with a  * are mandatory.</p>
+</div>
+<br>
+
+
+<form action="insert.php" method="post">
+  <div id="form">
+    <p style="font-size: 22px; text-align: center; font-weight: bold;" >Caravan details</p>
+    <label for="vehicle_make"><b>Vehicle Make *</b></label>
+    <input type="text" placeholder="Enter Vehicle Make" name="vehicle_make" required>
+    <br>
+    <label for="vehicle_model"><b>Vehicle Model *</b></label>
+    <input type="text" placeholder="Enter Model" name="vehicle_model"required>
+    <br>
+    <label for="vehicle_bodytype"><b>Vehicle bodytype *</b></label>
+    <input type="text" placeholder="Enter vehicle bodytype" name="vehicle_bodytype" required>
+    <br>
+    <label for="fuel_type"><b>Fuel Type *</b></label>
+    <input type="text" placeholder="Enter fuel type" name="fuel_type" required>
+    <br>
+    <label for="mileage"><b>Mileage *</b></label>
+    <input type="text" placeholder="Enter Mileage" name="mileage" required>
+    <br>
+    <label for="location"><b>Location *</b></label>
+    <input type="text" placeholder="Enter location" name="location" required>
+    <br>
+    <label for="year"><b>Construction Year *</b></label>
+    <input type="number" placeholder="Enter construction year" name="year" required>
+    <br>
+    <label for="num_doors"><b>Number of Doors *</b></label>
+    <input type="number" placeholder="Enter number of doors" name="num_doors" required>
+    
+    <label for="image_url"><b>Image(s)</b></label>
+    <input type="file" id="image" accept="image/jpeg, image/png, image/jpg"  name="image_url" required>
+    <output></output>
+
+</form>
+<input class="button" type="submit" name="upload" value="Upload">
+<input class="button" type="submit" name="upload" value="Upload">
+
+
+</div>
+
+<script>
+  $('form'). on ('submit', function(){
+    alert('Ad succesfully submitted');
+    
+})
+
+</script>
+</div>
+
+</body>
+</html>
